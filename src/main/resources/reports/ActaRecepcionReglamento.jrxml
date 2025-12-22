@@ -5,12 +5,11 @@
     <parameter name="dia" class="java.lang.String"/>
     <parameter name="mes" class="java.lang.String"/>
     <parameter name="anio" class="java.lang.String"/>
-
     <query language="sql"><![CDATA[]]></query>
     <background splitType="Stretch"/>
     <title height="79" splitType="Stretch">
         <element kind="frame" uuid="fd69f373-9589-4b23-b397-b58a8f287180" mode="Transparent" x="130" y="10" width="300" height="60">
-            <element kind="staticText" uuid="af1910a1-0c7e-44d9-9469-7c08c311144c" x="31" y="17" width="240" height="20" fontName="Arial">
+            <element kind="staticText" uuid="af1910a1-0c7e-44d9-9469-7c08c311144c" x="25" y="17" width="250" height="20" fontName="Arial">
                 <text><![CDATA[ACTA DE RECEPCIÓN REGLAMENTO INTERNO DE]]></text>
             </element>
             <element kind="staticText" uuid="3d302242-c1f4-4283-9376-20facf4e65de" x="127" y="32" width="50" height="20" fontName="Arial">
@@ -44,19 +43,12 @@
         <element kind="staticText" uuid="51488ff0-e90c-493e-97cb-6c0f2908731c" x="141" y="11" width="300" height="20" fontName="Arial">
             <text><![CDATA[ACTA DE RECEPCIÓN REGLAMENTO INTERNO DE TRABAJO]]></text>
         </element>
-
-        <element kind="textField" uuid="d2641442-959c-4005-8e24-f2736ead1bc0" x="70" y="60" width="400" height="85" fontName="Arial">
+        <element kind="textField" uuid="d2641442-959c-4005-8e24-f2736ead1bc0" x="70" y="60" width="400" height="100" fontName="Arial">
             <expression><![CDATA["Por medio de la presente yo, Sr/Sra. "+ $P{colaborador} +", con cédula de ciudadanía No."+$P{cedula}+" dejo expresa constancia de que he recibido una copia legible y en buen estado del Reglamento Interno de Trabajo vigente de la Empresa Eléctrica Regional Centro Sur C.A." + "\n\nEn caso de requerir una copia digital, la puede encontrar en el Manual de Procesos y Procedimientos de la CENTROSUR." ]]></expression>
         </element>
-
-        <element kind="staticText" uuid="87abfa0c-3121-421b-8836-b04001f04482" x="70" y="126" width="400" height="30">
-            <text><![CDATA[]]></text>
-        </element>
-
-        <element kind="textField" uuid="5d8e308b-588d-410c-a86e-25f39bd41ea7" x="70" y="162" width="200" height="14" fontName="Arial" positionType="Float">
+        <element kind="textField" uuid="5d8e308b-588d-410c-a86e-25f39bd41ea7" positionType="Float" x="70" y="162" width="200" height="14" fontName="Arial">
             <expression><![CDATA["Cuenca, " + $P{dia} + " de " + $P{mes} + " de " + $P{anio}+ "."]]></expression>
         </element>
-
     </columnHeader>
     <detail>
         <band height="174" splitType="Stretch">
@@ -66,10 +58,10 @@
             <element kind="rectangle" uuid="dc3db51a-40ee-48c0-8a39-4a0a9a06df81" x="70" y="99" width="160" height="1">
                 <pen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.8627451)"/>
             </element>
-            <element kind="staticText" uuid="77e43d66-30bb-49cd-a065-b741bb94d2b2" x="70" y="102" width="40" height="14" fontName="Arial">
+            <element kind="staticText" uuid="77e43d66-30bb-49cd-a065-b741bb94d2b2" x="70" y="102" width="34" height="14" fontName="Arial">
                 <text><![CDATA[Sr/Sra.]]></text>
             </element>
-            <element kind="staticText" uuid="7a3eb934-8ab0-473f-8b12-ef389e7ce391" x="70" y="116" width="20" height="14" fontName="Arial">
+            <element kind="staticText" uuid="7a3eb934-8ab0-473f-8b12-ef389e7ce391" x="70" y="116" width="14" height="14" fontName="Arial">
                 <text><![CDATA[CI.]]></text>
             </element>
             <element kind="textField" uuid="375b5ea3-8e36-4a53-b7e3-b4bc158ec54d" x="104" y="102" width="120" height="14" fontName="Arial">
