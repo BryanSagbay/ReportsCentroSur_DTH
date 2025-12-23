@@ -53,19 +53,19 @@ Los descuentos para los próximos años se determinarán de acuerdo al calculo d
         <element kind="rectangle" uuid="4e3582f6-d16e-402f-9d10-6336ee464550" x="232" y="97" width="100" height="20" backcolor="#FFF705"/>
         <element kind="rectangle" uuid="96ffdaab-df63-4be0-90d6-f2761b55a105" x="332" y="97" width="119" height="20" backcolor="#FFF705"/>
         <element kind="rectangle" uuid="aa349d82-3fa4-4568-9379-65acdf9ee0e8" x="450" y="97" width="97" height="20" backcolor="#FFF705"/>
-        <element kind="staticText" uuid="4201ab50-538d-4673-b6e9-8ccdd69e5f99" x="58" y="101" width="52" height="12" forecolor="#050505" bold="true">
+        <element kind="staticText" uuid="4201ab50-538d-4673-b6e9-8ccdd69e5f99" x="58" y="101" width="52" height="12" forecolor="#050505" bold="true" fontName="Arial">
             <text><![CDATA[NOMBRE]]></text>
         </element>
-        <element kind="staticText" uuid="13590149-a207-4000-9471-509ec2e336bd" x="476" y="101" width="38" height="12" forecolor="#050505" bold="true">
+        <element kind="staticText" uuid="13590149-a207-4000-9471-509ec2e336bd" x="476" y="101" width="38" height="12" forecolor="#050505" bold="true" fontName="Arial">
             <text><![CDATA[FIRMA]]></text>
         </element>
-        <element kind="staticText" uuid="ace664be-ae1a-400c-9523-b015fb212959" x="167" y="101" width="43" height="12" forecolor="#050505" bold="true">
+        <element kind="staticText" uuid="ace664be-ae1a-400c-9523-b015fb212959" x="167" y="101" width="43" height="12" forecolor="#050505" bold="true" fontName="Arial">
             <text><![CDATA[CÉDULA]]></text>
         </element>
-        <element kind="staticText" uuid="f3881ff3-523d-4bc7-b3d1-0f97d9922751" x="253" y="101" width="60" height="12" forecolor="#050505" bold="true">
+        <element kind="staticText" uuid="f3881ff3-523d-4bc7-b3d1-0f97d9922751" x="253" y="101" width="60" height="12" forecolor="#050505" bold="true" fontName="Arial">
             <text><![CDATA[DIRECCIÓN]]></text>
         </element>
-        <element kind="staticText" uuid="08fc2d8e-17d2-4fd5-9065-d2bd85578c43" x="341" y="101" width="104" height="12" forecolor="#050505" bold="true">
+        <element kind="staticText" uuid="08fc2d8e-17d2-4fd5-9065-d2bd85578c43" x="341" y="101" width="104" height="12" forecolor="#050505" bold="true" fontName="Arial">
             <text><![CDATA[LUGAR DE TRABAJO]]></text>
         </element>
         <element kind="rectangle" uuid="62896356-befd-4744-8306-a604d17f1cd4" x="22" y="117" width="120" height="40"/>
@@ -73,19 +73,19 @@ Los descuentos para los próximos años se determinarán de acuerdo al calculo d
         <element kind="rectangle" uuid="d883e3d4-3d70-4a6d-8a1e-f8877314e4df" x="232" y="117" width="100" height="40"/>
         <element kind="rectangle" uuid="a9125d9f-eabb-435e-a55d-3e16439b0600" x="332" y="117" width="118" height="40"/>
         <element kind="rectangle" uuid="4dc517d0-24dc-4400-a24a-dd2a57165174" x="450" y="117" width="97" height="40"/>
-        <element kind="textField" uuid="c03926cf-335b-47d6-91cf-f04023a78268" x="25" y="126" width="114" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="c03926cf-335b-47d6-91cf-f04023a78268" x="25" y="126" width="114" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{colaborador}]]></expression>
         </element>
-        <element kind="textField" uuid="ad1ec384-f6f4-4b14-ba87-c6759f820465" x="149" y="126" width="77" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="ad1ec384-f6f4-4b14-ba87-c6759f820465" x="149" y="126" width="77" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{cedula}]]></expression>
         </element>
-        <element kind="textField" uuid="b64c5557-ff6e-4dbe-aba1-f7f84d154bce" x="242" y="126" width="83" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="b64c5557-ff6e-4dbe-aba1-f7f84d154bce" x="242" y="126" width="83" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{direccion}]]></expression>
         </element>
-        <element kind="textField" uuid="bfae5799-4656-48a8-93d0-26555c7ee676" x="341" y="126" width="102" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="bfae5799-4656-48a8-93d0-26555c7ee676" x="341" y="126" width="102" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{lugar_trabajo}]]></expression>
         </element>
-        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="56" y="169" width="170" height="20">
+        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="56" y="169" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
         <element kind="staticText" uuid="e1dafb71-33f0-4653-a577-a335d92d673c" x="23" y="169" width="33" height="20" forecolor="#030303" fontName="Arial">
@@ -94,7 +94,7 @@ Los descuentos para los próximos años se determinarán de acuerdo al calculo d
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="31b9425f-acc9-4bc2-b108-bccc9e60be0c" x="84" y="189" width="170" height="20">
+        <element kind="textField" uuid="31b9425f-acc9-4bc2-b108-bccc9e60be0c" x="84" y="189" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{recibido_por}]]></expression>
         </element>
         <element kind="staticText" uuid="b4b4de95-fa35-46ec-a2c2-bec6822d1773" x="23" y="189" width="61" height="20" forecolor="#030303" fontName="Arial">
@@ -103,7 +103,7 @@ Los descuentos para los próximos años se determinarán de acuerdo al calculo d
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="688c8e93-b847-4731-9fac-f0ed2f9bffc0" x="116" y="209" width="170" height="20">
+        <element kind="textField" uuid="688c8e93-b847-4731-9fac-f0ed2f9bffc0" x="116" y="209" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
         <element kind="staticText" uuid="167afec6-582a-4cef-937e-29eb28d047c9" x="23" y="209" width="93" height="20" forecolor="#030303" fontName="Arial">

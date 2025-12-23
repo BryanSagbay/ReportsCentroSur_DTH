@@ -53,16 +53,16 @@ Versión: 0]]></text>
             <text><![CDATA[Reemplazo:]]></text>
         </element>
         <element kind="rectangle" uuid="b79c5be4-be7c-4c7f-ac68-5fbeb4e63d84" x="449" y="1" width="100" height="100"/>
-        <element kind="textField" uuid="6c86aebc-e2b8-407e-b6a7-9c6a1676ad06" x="70" y="21" width="220" height="19">
+        <element kind="textField" uuid="6c86aebc-e2b8-407e-b6a7-9c6a1676ad06" x="70" y="21" width="220" height="19" fontName="Arial">
             <expression><![CDATA[$P{colaborador}]]></expression>
         </element>
-        <element kind="textField" uuid="c81cceaf-b34e-4e39-b634-66a52148c1f2" x="60" y="40" width="220" height="19">
+        <element kind="textField" uuid="c81cceaf-b34e-4e39-b634-66a52148c1f2" x="60" y="40" width="220" height="19" fontName="Arial">
             <expression><![CDATA[$P{area_departamento}]]></expression>
         </element>
-        <element kind="textField" uuid="9dd4aa34-dacd-4ff9-977f-dcf1b0d98a01" x="42" y="59" width="240" height="19">
+        <element kind="textField" uuid="9dd4aa34-dacd-4ff9-977f-dcf1b0d98a01" x="42" y="59" width="240" height="19" fontName="Arial">
             <expression><![CDATA[$P{cargo}]]></expression>
         </element>
-        <element kind="textField" uuid="b8cc1700-c64a-4ab1-8058-780c9d852ade" x="66" y="78" width="220" height="19">
+        <element kind="textField" uuid="b8cc1700-c64a-4ab1-8058-780c9d852ade" x="66" y="78" width="220" height="19" fontName="Arial">
             <expression><![CDATA[$P{reemplazo}]]></expression>
         </element>
     </pageHeader>

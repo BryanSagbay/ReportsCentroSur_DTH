@@ -1,14 +1,13 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
 <jasperReport name="ConstanciaEntregaDocumentos" language="java" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="acc34f75-a89f-48af-8954-ff70ed1742cd">
+    <dataset name="Dataset1" uuid="ed2dacf0-271b-40bd-aaf2-042e77edb271">
+        <query language="sql"><![CDATA[]]></query>
+    </dataset>
     <parameter name="colaborador" class="java.lang.String"/>
     <parameter name="area_departamento" class="java.lang.String"/>
     <parameter name="cargo" class="java.lang.String"/>
     <parameter name="reemplazo" class="java.lang.String"/>
     <parameter name="fecha_entrega_documentos" class="java.lang.String"/>
-
-    <dataset name="Dataset1" uuid="ed2dacf0-271b-40bd-aaf2-042e77edb271">
-        <query language="sql"><![CDATA[]]></query>
-    </dataset>
     <query language="sql"><![CDATA[]]></query>
     <background splitType="Stretch"/>
     <title height="79" splitType="Stretch">
@@ -44,7 +43,7 @@ Versión: 0]]></text>
         <element kind="staticText" uuid="74396752-72d7-4e8e-896b-d0a4dd8916d8" x="10" y="21" width="60" height="19" fontName="Arial">
             <text><![CDATA[Colaborador:]]></text>
         </element>
-        <element kind="staticText" uuid="de484cf7-90a1-45d0-a5f3-38b54aefc7a9" x="10" y="40" width="54" height="19" fontName="Arial">
+        <element kind="staticText" uuid="de484cf7-90a1-45d0-a5f3-38b54aefc7a9" x="10" y="40" width="50" height="19" fontName="Arial">
             <text><![CDATA[Área/Dpto:]]></text>
         </element>
         <element kind="staticText" uuid="d924cfa7-f32b-4748-894e-ae6f3a2757b8" x="10" y="59" width="32" height="19" fontName="Arial">

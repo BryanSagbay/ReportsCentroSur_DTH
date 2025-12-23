@@ -53,10 +53,10 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="eccc2422-ad9d-4762-9fbf-9b4244112f68" x="75" y="9" width="170" height="20">
+        <element kind="textField" uuid="eccc2422-ad9d-4762-9fbf-9b4244112f68" x="75" y="9" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{cuidad_colaborador}]]></expression>
         </element>
-        <element kind="textField" uuid="f4365b40-1ac2-439b-b749-6fc862913e85" x="91" y="29" width="170" height="20">
+        <element kind="textField" uuid="f4365b40-1ac2-439b-b749-6fc862913e85" x="91" y="29" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{direccion}]]></expression>
         </element>
         <element kind="rectangle" uuid="46c3d7d0-4268-4157-b7cb-a177d09f736f" x="60" y="59" width="450" height="40" backcolor="#030303" radius="8">
@@ -71,7 +71,7 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="4dff614e-8e3b-4a87-b757-c143727fd736" x="281" y="192" width="170" height="20">
+        <element kind="textField" uuid="4dff614e-8e3b-4a87-b757-c143727fd736" x="281" y="192" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{responsable_DTH}]]></expression>
         </element>
     </pageHeader>
@@ -82,7 +82,7 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="b079897e-1c6b-4923-8d77-d2e33c799071" x="281" y="-36" width="170" height="20">
+        <element kind="textField" uuid="b079897e-1c6b-4923-8d77-d2e33c799071" x="281" y="-36" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
     </columnHeader>
@@ -93,19 +93,19 @@
             <element kind="rectangle" uuid="62c6df1e-c943-4f23-a9f4-5c088e656552" x="221" y="-196" width="119" height="20"/>
             <element kind="rectangle" uuid="8a96c6a4-5817-43a5-9b45-db75b59076c3" x="340" y="-196" width="103" height="20"/>
             <element kind="rectangle" uuid="c4ad3078-fd56-4e60-918a-789012e77d10" x="443" y="-196" width="97" height="20"/>
-            <element kind="staticText" uuid="52ee3799-88f3-41a7-855d-48eda44559d4" x="39" y="-192" width="39" height="18" forecolor="#FF0905">
+            <element kind="staticText" uuid="52ee3799-88f3-41a7-855d-48eda44559d4" x="39" y="-192" width="39" height="18" forecolor="#FF0905" fontName="Arial">
                 <text><![CDATA[FECHA]]></text>
             </element>
-            <element kind="staticText" uuid="c2a6841b-f123-41f3-9112-39b949be81de" x="477" y="-192" width="36" height="18" forecolor="#FF0905">
+            <element kind="staticText" uuid="c2a6841b-f123-41f3-9112-39b949be81de" x="477" y="-192" width="36" height="18" forecolor="#FF0905" fontName="Arial">
                 <text><![CDATA[FIRMA]]></text>
             </element>
-            <element kind="staticText" uuid="c3ea4f6a-0799-4511-9eb6-da07273e6e0b" x="127" y="-192" width="66" height="18" forecolor="#FF0905">
+            <element kind="staticText" uuid="c3ea4f6a-0799-4511-9eb6-da07273e6e0b" x="127" y="-192" width="66" height="18" forecolor="#FF0905" fontName="Arial">
                 <text><![CDATA[APELLIDOS]]></text>
             </element>
-            <element kind="staticText" uuid="ff27d48c-b362-4fcb-b231-823a8f3a06c5" x="250" y="-192" width="54" height="16" forecolor="#FF0905">
+            <element kind="staticText" uuid="ff27d48c-b362-4fcb-b231-823a8f3a06c5" x="250" y="-192" width="54" height="16" forecolor="#FF0905" fontName="Arial">
                 <text><![CDATA[NOMBRES]]></text>
             </element>
-            <element kind="staticText" uuid="0b155204-8ccb-47a8-a85c-d77590e6b0dd" x="367" y="-192" width="50" height="18" forecolor="#FF0905">
+            <element kind="staticText" uuid="0b155204-8ccb-47a8-a85c-d77590e6b0dd" x="367" y="-192" width="50" height="18" forecolor="#FF0905" fontName="Arial">
                 <text><![CDATA[CARGO]]></text>
             </element>
             <element kind="rectangle" uuid="08d60e38-4d9f-4169-9039-53f88fb67f0c" x="22" y="-176" width="73" height="40"/>
@@ -113,16 +113,16 @@
             <element kind="rectangle" uuid="5ccfc95e-d693-4a63-bcb2-97dfb51ccd34" x="221" y="-176" width="119" height="40"/>
             <element kind="rectangle" uuid="4d5310b2-39cc-4361-bc59-2829de043780" x="340" y="-176" width="103" height="40"/>
             <element kind="rectangle" uuid="5e044023-a716-4230-aec5-8ffdff028ea3" x="443" y="-176" width="97" height="40"/>
-            <element kind="textField" uuid="8a1a3a0a-f007-4c7a-ac3e-60bb57b5e402" x="26" y="-167" width="64" height="25" hTextAlign="Center">
+            <element kind="textField" uuid="8a1a3a0a-f007-4c7a-ac3e-60bb57b5e402" x="26" y="-167" width="64" height="25" hTextAlign="Center" fontName="Arial">
                 <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
             </element>
-            <element kind="textField" uuid="c52d0e5f-84ae-432f-a9b0-88647a75bdb3" x="99" y="-167" width="108" height="25" hTextAlign="Center">
+            <element kind="textField" uuid="c52d0e5f-84ae-432f-a9b0-88647a75bdb3" x="99" y="-167" width="108" height="25" hTextAlign="Center" fontName="Arial">
                 <expression><![CDATA[$P{colaborador_apellidos}]]></expression>
             </element>
-            <element kind="textField" uuid="7a997b0b-7f6f-4a73-a260-776da0c13907" x="227" y="-167" width="106" height="25" hTextAlign="Center">
+            <element kind="textField" uuid="7a997b0b-7f6f-4a73-a260-776da0c13907" x="227" y="-167" width="106" height="25" hTextAlign="Center" fontName="Arial">
                 <expression><![CDATA[$P{colaborador_nombres}]]></expression>
             </element>
-            <element kind="textField" uuid="759d4a26-a104-4d6b-9086-760287036e53" x="350" y="-167" width="86" height="25" hTextAlign="Center">
+            <element kind="textField" uuid="759d4a26-a104-4d6b-9086-760287036e53" x="350" y="-167" width="86" height="25" hTextAlign="Center" fontName="Arial">
                 <expression><![CDATA[$P{cargo}]]></expression>
             </element>
         </band>
