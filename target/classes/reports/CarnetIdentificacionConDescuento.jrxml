@@ -8,7 +8,6 @@
     <parameter name="colaborador_apellidos" class="java.lang.String"/>
     <parameter name="cargo" class="java.lang.String"/>
     <parameter name="responsable_DTH" class="java.lang.String"/>
-
     <query language="sql"><![CDATA[]]></query>
     <background splitType="Stretch"/>
     <title height="79" splitType="Stretch">
@@ -43,23 +42,11 @@
         <element kind="rectangle" uuid="92b76994-2cc0-432e-bb15-f3f10580a5d5" x="11" y="-9" width="549" height="59">
             <pen lineWidth="0.5"/>
         </element>
-        <element kind="rectangle" uuid="9e93b1e3-1538-4bdd-a5c4-f7ceeabfd19f" x="11" y="50" width="549" height="110">
+        <element kind="rectangle" uuid="9e93b1e3-1538-4bdd-a5c4-f7ceeabfd19f" x="11" y="50" width="549" height="90">
             <pen lineWidth="0.5"/>
         </element>
-        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="39" y="59" width="170" height="20">
-            <expression><![CDATA[$P{colaborador}]]></expression>
-        </element>
-        <element kind="staticText" uuid="e1dafb71-33f0-4653-a577-a335d92d673c" x="22" y="59" width="17" height="20" forecolor="#030303" fontName="Arial">
-            <text><![CDATA[Yo,]]></text>
-            <box>
-                <pen lineColor="#0A8228"/>
-            </box>
-        </element>
-        <element kind="staticText" uuid="167afec6-582a-4cef-937e-29eb28d047c9" x="209" y="59" width="344" height="20" forecolor="#030303" fontName="Arial">
-            <text><![CDATA[, certifico haber recibido el carnet de identificación como Servidor de]]></text>
-            <box>
-                <pen lineColor="#0A8228"/>
-            </box>
+        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="22" y="59" width="528" height="70" fontName="Arial">
+            <expression><![CDATA["Yo, "+$P{colaborador}+", certifico haber recibido el carnet de identificación como Servidor de la Empresa y a la vez me responsabilizo por el buen uso del mismo y en caso de la finalización de la relación laboral a la devolución del mismo. \n\nLibre y voluntariamente me comprometo a depositar en la cuenta de la Empresa Eléctrica Regional Centro Sur C.A.  el valor de 10usd, correspodiente a la reposición por pérdida del carnet de identificación que he recibido."]]></expression>
         </element>
         <element kind="staticText" uuid="b6cb75da-b077-4104-b883-b64d8ccec953" x="22" y="3" width="42" height="20" forecolor="#13702A" fontName="Arial">
             <text><![CDATA[CUIDAD:]]></text>
@@ -79,73 +66,65 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="staticText" uuid="96e760e7-8aad-454a-a28f-afa599e3cd6c" x="22" y="79" width="530" height="80" forecolor="#030303" fontName="Arial">
-            <text><![CDATA[la Empresa y a la vez me responsabilizo por el buen uso del mismo y en caso de la finalización de la relación laboral a la devolución del mismo.
-
-Libre y voluntariamente me comprometo a depositar en la cuenta de la Empresa Eléctrica Regional Centro Sur C.A.  el valor de 10usd, correspodiente a la reposición por pérdida del carnet de identificación que he recibido. ]]></text>
-            <box>
-                <pen lineColor="#0A8228"/>
-            </box>
-        </element>
-        <element kind="rectangle" uuid="25141096-6281-4e38-97a1-b8f34d1e1226" x="11" y="159" width="549" height="120">
+        <element kind="rectangle" uuid="25141096-6281-4e38-97a1-b8f34d1e1226" x="11" y="140" width="549" height="138">
             <pen lineWidth="0.5"/>
         </element>
-        <element kind="textField" uuid="42d66f33-7da2-4b5c-84d1-06be10716184" x="275" y="236" width="170" height="20">
+        <element kind="textField" uuid="42d66f33-7da2-4b5c-84d1-06be10716184" x="275" y="232" width="170" height="20">
             <expression><![CDATA[$P{responsable_DTH}]]></expression>
         </element>
-        <element kind="staticText" uuid="0b00acd3-9a30-4d19-8397-22d70ea731fa" x="124" y="236" width="150" height="20" forecolor="#030303" fontName="Arial">
+        <element kind="staticText" uuid="0b00acd3-9a30-4d19-8397-22d70ea731fa" x="139" y="232" width="136" height="20" forecolor="#030303" fontName="Arial">
             <text><![CDATA[Responsable de entrega DTH:]]></text>
             <box>
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="rectangle" uuid="2792b90d-0abd-4dfc-9b31-b20c074134de" x="23" y="169" width="60" height="20"/>
-        <element kind="rectangle" uuid="362ac89f-abb5-4fbe-87b4-a4472e0257e9" x="83" y="169" width="119" height="20"/>
-        <element kind="rectangle" uuid="b8afe6be-05f8-43c2-8008-3aed4f7da4e6" x="202" y="169" width="119" height="20"/>
-        <element kind="rectangle" uuid="71b8c42f-6430-4f14-b4bd-b4699191e5af" x="321" y="169" width="119" height="20"/>
-        <element kind="rectangle" uuid="c210414f-4bb6-446a-a25c-d6471b13a488" x="439" y="169" width="111" height="20"/>
-        <element kind="staticText" uuid="77a1d5b3-8d40-42ff-ad29-59c48f056c40" x="34" y="173" width="50" height="18" forecolor="#2278FF">
+        <element kind="rectangle" uuid="2792b90d-0abd-4dfc-9b31-b20c074134de" x="23" y="155" width="72" height="20"/>
+        <element kind="rectangle" uuid="362ac89f-abb5-4fbe-87b4-a4472e0257e9" x="95" y="155" width="119" height="20"/>
+        <element kind="rectangle" uuid="b8afe6be-05f8-43c2-8008-3aed4f7da4e6" x="214" y="155" width="119" height="20"/>
+        <element kind="rectangle" uuid="71b8c42f-6430-4f14-b4bd-b4699191e5af" x="333" y="155" width="117" height="20"/>
+        <element kind="rectangle" uuid="c210414f-4bb6-446a-a25c-d6471b13a488" x="450" y="155" width="100" height="20"/>
+        <element kind="staticText" uuid="77a1d5b3-8d40-42ff-ad29-59c48f056c40" x="39" y="159" width="36" height="16" forecolor="#2278FF">
             <text><![CDATA[FECHA]]></text>
         </element>
-        <element kind="staticText" uuid="8288b2d6-4c77-4a5b-bc75-dcb5ba6220cc" x="473" y="173" width="50" height="18" forecolor="#2278FF">
+        <element kind="staticText" uuid="8288b2d6-4c77-4a5b-bc75-dcb5ba6220cc" x="482" y="159" width="36" height="16" forecolor="#2278FF">
             <text><![CDATA[FIRMA]]></text>
         </element>
-        <element kind="staticText" uuid="84028f11-0ef1-467f-9f45-7c4f3b70e0f0" x="118" y="173" width="70" height="18" forecolor="#2278FF">
+        <element kind="staticText" uuid="84028f11-0ef1-467f-9f45-7c4f3b70e0f0" x="132" y="159" width="60" height="16" forecolor="#2278FF">
             <text><![CDATA[APELLIDOS]]></text>
         </element>
-        <element kind="staticText" uuid="306d7e74-c6cb-4f59-987c-413cf3b7d01b" x="240" y="173" width="70" height="18" forecolor="#2278FF">
+        <element kind="staticText" uuid="306d7e74-c6cb-4f59-987c-413cf3b7d01b" x="252" y="159" width="48" height="16" forecolor="#2278FF">
             <text><![CDATA[NOMBRES]]></text>
         </element>
-        <element kind="staticText" uuid="511da921-49ce-4f57-8666-3b7ccd462d0f" x="363" y="173" width="50" height="18" forecolor="#2278FF">
+        <element kind="staticText" uuid="511da921-49ce-4f57-8666-3b7ccd462d0f" x="372" y="159" width="38" height="16" forecolor="#2278FF">
             <text><![CDATA[CARGO]]></text>
         </element>
-        <element kind="rectangle" uuid="753ba696-b590-485d-aedb-82a6169b8ea4" x="23" y="189" width="60" height="40"/>
-        <element kind="rectangle" uuid="d6ef614a-8868-48b9-8362-857c617846fb" x="83" y="189" width="119" height="40"/>
-        <element kind="rectangle" uuid="9a5f4850-0d14-458b-b5c0-598d9b2c3fca" x="202" y="189" width="119" height="40"/>
-        <element kind="rectangle" uuid="d026a095-721d-49a6-957a-02fbf51e9757" x="321" y="189" width="118" height="40"/>
-        <element kind="rectangle" uuid="34e02adc-d515-43a3-8f71-77cc425e6ad4" x="439" y="189" width="111" height="40"/>
-        <element kind="textField" uuid="cee8e3f1-cded-4eac-b5c1-1f89c3a0245e" x="24" y="196" width="58" height="25">
+        <element kind="rectangle" uuid="753ba696-b590-485d-aedb-82a6169b8ea4" x="23" y="175" width="72" height="40"/>
+        <element kind="rectangle" uuid="d6ef614a-8868-48b9-8362-857c617846fb" x="95" y="175" width="119" height="40"/>
+        <element kind="rectangle" uuid="9a5f4850-0d14-458b-b5c0-598d9b2c3fca" x="214" y="175" width="119" height="40"/>
+        <element kind="rectangle" uuid="d026a095-721d-49a6-957a-02fbf51e9757" x="333" y="175" width="117" height="40"/>
+        <element kind="rectangle" uuid="34e02adc-d515-43a3-8f71-77cc425e6ad4" x="450" y="175" width="100" height="40"/>
+        <element kind="textField" uuid="cee8e3f1-cded-4eac-b5c1-1f89c3a0245e" x="26" y="182" width="66" height="25" hTextAlign="Center" vTextAlign="Middle">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
-        <element kind="textField" uuid="eb283c43-0a18-4338-961a-a4ea6e6dd70c" x="89" y="196" width="106" height="25">
+        <element kind="textField" uuid="eb283c43-0a18-4338-961a-a4ea6e6dd70c" x="101" y="182" width="106" height="25" hTextAlign="Center" vTextAlign="Middle">
             <expression><![CDATA[$P{colaborador_apellidos}]]></expression>
         </element>
-        <element kind="textField" uuid="66372b21-a058-4335-8f1c-8fe6a6adbbb1" x="208" y="196" width="106" height="25">
+        <element kind="textField" uuid="66372b21-a058-4335-8f1c-8fe6a6adbbb1" x="220" y="182" width="106" height="25" hTextAlign="Center" vTextAlign="Middle">
             <expression><![CDATA[$P{colaborador_nombres}]]></expression>
         </element>
-        <element kind="textField" uuid="2917aac9-d7e2-401c-87ec-f59584f0dab7" x="327" y="197" width="106" height="25">
+        <element kind="textField" uuid="2917aac9-d7e2-401c-87ec-f59584f0dab7" x="338" y="182" width="105" height="25" hTextAlign="Center" vTextAlign="Middle">
             <expression><![CDATA[$P{cargo}]]></expression>
         </element>
-    </pageHeader>
-    <columnHeader height="249" splitType="Stretch">
-        <element kind="textField" uuid="72c990df-b63f-4e6f-ae9d-5b7b9c2c9c59" x="274" y="-23" width="170" height="20">
-            <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
-        </element>
-        <element kind="staticText" uuid="50424548-b3ed-4c1e-b917-a9b84a5d5681" x="237" y="-23" width="38" height="20" forecolor="#030303" fontName="Arial">
+        <element kind="staticText" uuid="50424548-b3ed-4c1e-b917-a9b84a5d5681" x="243" y="252" width="32" height="20" forecolor="#030303" fontName="Arial">
             <text><![CDATA[Fecha:]]></text>
             <box>
                 <pen lineColor="#0A8228"/>
             </box>
+        </element>
+    </pageHeader>
+    <columnHeader height="249" splitType="Stretch">
+        <element kind="textField" uuid="72c990df-b63f-4e6f-ae9d-5b7b9c2c9c59" x="275" y="-27" width="170" height="20">
+            <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
     </columnHeader>
     <detail>

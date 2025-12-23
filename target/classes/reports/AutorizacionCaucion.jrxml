@@ -10,7 +10,7 @@
     <background splitType="Stretch"/>
     <title height="79" splitType="Stretch">
         <element kind="frame" uuid="4c096b59-dcd1-42ea-b8a8-9f9f4ac22e92" mode="Transparent" x="130" y="10" width="300" height="60">
-            <element kind="staticText" uuid="f35e54b5-779c-4fd7-a0b2-1579937af0a3" x="63" y="22" width="175" height="28" fontName="Arial" fontSize="12.0">
+            <element kind="staticText" uuid="f35e54b5-779c-4fd7-a0b2-1579937af0a3" x="63" y="22" width="175" height="28" fontName="Arial" fontSize="10.0">
                 <text><![CDATA[AUTORIZACIÓN DE CAUCIÓN]]></text>
             </element>
             <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
