@@ -43,7 +43,7 @@
         <element kind="staticText" uuid="51488ff0-e90c-493e-97cb-6c0f2908731c" x="141" y="11" width="300" height="20" fontName="Arial">
             <text><![CDATA[ACTA DE RECEPCIÓN REGLAMENTO INTERNO DE TRABAJO]]></text>
         </element>
-        <element kind="textField" uuid="d2641442-959c-4005-8e24-f2736ead1bc0" x="70" y="60" width="400" height="100" fontName="Arial">
+        <element kind="textField" uuid="d2641442-959c-4005-8e24-f2736ead1bc0" x="70" y="60" width="430" height="100" fontName="Arial">
             <expression><![CDATA["Por medio de la presente yo, Sr/Sra. "+ $P{colaborador} +", con cédula de ciudadanía No."+$P{cedula}+" dejo expresa constancia de que he recibido una copia legible y en buen estado del Reglamento Interno de Trabajo vigente de la Empresa Eléctrica Regional Centro Sur C.A." + "\n\nEn caso de requerir una copia digital, la puede encontrar en el Manual de Procesos y Procedimientos de la CENTROSUR." ]]></expression>
         </element>
         <element kind="textField" uuid="5d8e308b-588d-410c-a86e-25f39bd41ea7" positionType="Float" x="70" y="162" width="200" height="14" fontName="Arial">

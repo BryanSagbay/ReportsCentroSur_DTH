@@ -45,7 +45,7 @@
         <element kind="rectangle" uuid="9e93b1e3-1538-4bdd-a5c4-f7ceeabfd19f" x="11" y="50" width="549" height="60">
             <pen lineWidth="0.5"/>
         </element>
-        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="23" y="68" width="526" height="35">
+        <element kind="textField" uuid="55b3aba2-4487-4227-be22-ff759abfe6d8" x="23" y="68" width="526" height="35" fontName="Arial">
             <expression><![CDATA["Yo, "+$P{colaborador}+", certifico haber recibido el carnet de identificación como Servidor de CENTROSUR y a la vez me comprometo al buen uso del mismo. "]]></expression>
         </element>
         <element kind="staticText" uuid="b6cb75da-b077-4104-b883-b64d8ccec953" x="22" y="3" width="42" height="20" forecolor="#13702A" fontName="Arial">
@@ -54,10 +54,10 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="b271a2e9-871c-46dc-946a-d1944f00d611" x="65" y="3" width="170" height="20">
+        <element kind="textField" uuid="b271a2e9-871c-46dc-946a-d1944f00d611" x="65" y="3" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{cuidad_colaborador}]]></expression>
         </element>
-        <element kind="textField" uuid="4b67a218-a0ca-40d3-a877-79f6440ec31b" x="82" y="23" width="170" height="20">
+        <element kind="textField" uuid="4b67a218-a0ca-40d3-a877-79f6440ec31b" x="82" y="23" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{direccion}]]></expression>
         </element>
         <element kind="staticText" uuid="5117100a-e223-4e22-b4e4-fd10294deac7" x="22" y="23" width="60" height="20" forecolor="#13702A" fontName="Arial">
@@ -103,16 +103,16 @@
         <element kind="rectangle" uuid="9a5f4850-0d14-458b-b5c0-598d9b2c3fca" x="214" y="144" width="119" height="40"/>
         <element kind="rectangle" uuid="d026a095-721d-49a6-957a-02fbf51e9757" x="333" y="144" width="117" height="40"/>
         <element kind="rectangle" uuid="34e02adc-d515-43a3-8f71-77cc425e6ad4" x="450" y="144" width="100" height="40"/>
-        <element kind="textField" uuid="cee8e3f1-cded-4eac-b5c1-1f89c3a0245e" x="26" y="151" width="66" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="cee8e3f1-cded-4eac-b5c1-1f89c3a0245e" x="26" y="151" width="66" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
-        <element kind="textField" uuid="eb283c43-0a18-4338-961a-a4ea6e6dd70c" x="101" y="151" width="106" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="eb283c43-0a18-4338-961a-a4ea6e6dd70c" x="101" y="151" width="106" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{colaborador_apellidos}]]></expression>
         </element>
-        <element kind="textField" uuid="66372b21-a058-4335-8f1c-8fe6a6adbbb1" x="220" y="151" width="106" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="66372b21-a058-4335-8f1c-8fe6a6adbbb1" x="220" y="151" width="106" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{colaborador_nombres}]]></expression>
         </element>
-        <element kind="textField" uuid="2917aac9-d7e2-401c-87ec-f59584f0dab7" x="338" y="151" width="105" height="25" hTextAlign="Center" vTextAlign="Middle">
+        <element kind="textField" uuid="2917aac9-d7e2-401c-87ec-f59584f0dab7" x="338" y="151" width="105" height="25" hTextAlign="Center" vTextAlign="Middle" fontName="Arial">
             <expression><![CDATA[$P{cargo}]]></expression>
         </element>
         <element kind="staticText" uuid="50424548-b3ed-4c1e-b917-a9b84a5d5681" x="245" y="220" width="32" height="20" forecolor="#030303" fontName="Arial">
@@ -121,7 +121,7 @@
                 <pen lineColor="#0A8228"/>
             </box>
         </element>
-        <element kind="textField" uuid="72c990df-b63f-4e6f-ae9d-5b7b9c2c9c59" x="277" y="220" width="170" height="20">
+        <element kind="textField" uuid="72c990df-b63f-4e6f-ae9d-5b7b9c2c9c59" x="277" y="220" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
         </element>
     </pageHeader>
