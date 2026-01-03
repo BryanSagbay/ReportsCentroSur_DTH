@@ -29,30 +29,49 @@ public class Formulario extends JFrame {
     private JTextField txtNombres;
     private JTextField txtApellidos;
     private JTextField txtResponsableDTH;
+    private JTextField analista_th;
+    private JTextField trabajadora_social;
+    private JTextField remuneraciones;
+    private JTextField seguros;
+    private JTextField seguridad;
+    private JTextField riesgo;
+    private JTextField coordinador_calidad;
+    private JTextField departamento_medico;
+    private JTextField ingeniero_calidad;
+    private JTextField tegnologia;
+    private JTextField distribucion;
 
     private Map<String, JCheckBox> checkBoxReportes;
 
-    // Paleta de colores moderna con gradientes
-    private static final Color PRIMARY_COLOR = new Color(79, 70, 229); // Indigo 600
-    private static final Color PRIMARY_DARK = new Color(67, 56, 202); // Indigo 700
-    private static final Color SECONDARY_COLOR = new Color(236, 72, 153); // Pink 500
-    private static final Color ACCENT_COLOR = new Color(168, 85, 247); // Purple 500
-    private static final Color BACKGROUND_COLOR = new Color(248, 250, 252); // Slate 50
+    // Paleta de colores profesional y moderna
+    private static final Color PRIMARY_COLOR = new Color(59, 130, 246); // Blue-500
+    private static final Color PRIMARY_HOVER = new Color(37, 99, 235); // Blue-600
+    private static final Color PRIMARY_PRESSED = new Color(29, 78, 216); // Blue-700
+    private static final Color SECONDARY_COLOR = new Color(99, 102, 241); // Indigo-500
+    private static final Color ACCENT_COLOR = new Color(168, 85, 247); // Purple-500
+    private static final Color SUCCESS_COLOR = new Color(34, 197, 94); // Green-500
+    private static final Color SUCCESS_HOVER = new Color(22, 163, 74); // Green-600
+    private static final Color WARNING_COLOR = new Color(249, 115, 22); // Orange-500
+    private static final Color WARNING_HOVER = new Color(234, 88, 12); // Orange-600
+
+    private static final Color BACKGROUND_START = new Color(249, 250, 251); // Gray-50
+    private static final Color BACKGROUND_END = new Color(243, 244, 246); // Gray-100
     private static final Color CARD_COLOR = Color.WHITE;
-    private static final Color TEXT_PRIMARY = new Color(15, 23, 42); // Slate 900
-    private static final Color TEXT_SECONDARY = new Color(100, 116, 139); // Slate 500
-    private static final Color BORDER_COLOR = new Color(226, 232, 240); // Slate 200
-    private static final Color SUCCESS_COLOR = new Color(34, 197, 94); // Green 500
-    private static final Color WARNING_COLOR = new Color(251, 146, 60); // Orange 400
+    private static final Color TEXT_PRIMARY = new Color(17, 24, 39); // Gray-900
+    private static final Color TEXT_SECONDARY = new Color(107, 114, 128); // Gray-500
+    private static final Color BORDER_COLOR = new Color(229, 231, 235); // Gray-200
+    private static final Color FOCUS_BORDER = new Color(147, 197, 253); // Blue-300
+    private static final Color INPUT_BG_FOCUS = new Color(239, 246, 255); // Blue-50
 
     public Formulario() {
-        setTitle("Sistema de Documentación");
-        setSize(950, 900);
+        setTitle("Sistema de Gestión Documental");
+        setSize(1000, 900);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setResizable(false);
+        setResizable(true);
+        setMinimumSize(new Dimension(900, 800));
 
-        // Panel principal con gradiente sutil
+        // Panel principal con gradiente profesional
         JPanel mainPanel = new JPanel(new BorderLayout()) {
             @Override
             protected void paintComponent(Graphics g) {
@@ -60,27 +79,26 @@ public class Formulario extends JFrame {
                 Graphics2D g2d = (Graphics2D) g;
                 g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
                 int w = getWidth(), h = getHeight();
-                GradientPaint gp = new GradientPaint(0, 0, BACKGROUND_COLOR, 0, h, new Color(241, 245, 249));
+                GradientPaint gp = new GradientPaint(0, 0, BACKGROUND_START, 0, h, BACKGROUND_END);
                 g2d.setPaint(gp);
                 g2d.fillRect(0, 0, w, h);
             }
         };
-        mainPanel.setBorder(new EmptyBorder(25, 25, 25, 25));
+        mainPanel.setBorder(new EmptyBorder(30, 30, 30, 30));
 
-        // Header con diseño mejorado
+        // Header moderno y profesional
         JPanel headerPanel = crearHeader();
         mainPanel.add(headerPanel, BorderLayout.NORTH);
 
-        // Panel de contenido con scroll suave
+        // Panel de contenido con scroll
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(new BoxLayout(contentPanel, BoxLayout.Y_AXIS));
         contentPanel.setOpaque(false);
-        contentPanel.setBorder(new EmptyBorder(25, 0, 25, 0));
+        contentPanel.setBorder(new EmptyBorder(20, 0, 20, 0));
 
-        // Cards con animación visual
         JPanel datosCard = crearCardDatosPersonales();
         contentPanel.add(datosCard);
-        contentPanel.add(Box.createRigidArea(new Dimension(0, 25)));
+        contentPanel.add(Box.createRigidArea(new Dimension(0, 20)));
 
         JPanel reportesCard = crearCardReportes();
         contentPanel.add(reportesCard);
@@ -92,12 +110,12 @@ public class Formulario extends JFrame {
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 
-        // Personalizar scrollbar
+        // Scrollbar moderna
         scrollPane.getVerticalScrollBar().setUI(new javax.swing.plaf.basic.BasicScrollBarUI() {
             @Override
             protected void configureScrollBarColors() {
-                this.thumbColor = new Color(203, 213, 225);
-                this.trackColor = BACKGROUND_COLOR;
+                this.thumbColor = new Color(156, 163, 175);
+                this.trackColor = BACKGROUND_START;
             }
 
             @Override
@@ -119,7 +137,7 @@ public class Formulario extends JFrame {
 
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
-        // Footer moderno
+        // Footer con botón principal
         JPanel footerPanel = crearFooter();
         mainPanel.add(footerPanel, BorderLayout.SOUTH);
 
@@ -130,81 +148,89 @@ public class Formulario extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setOpaque(false);
-        panel.setBorder(new EmptyBorder(0, 0, 20, 0));
+        panel.setBorder(new EmptyBorder(0, 0, 25, 0));
 
-        // Icono decorativo
-        JLabel iconLabel = new JLabel("📄");
-        iconLabel.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 48));
-        iconLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        JLabel titulo = new JLabel("Generación de Documentos");
-        titulo.setFont(new Font("Segoe UI", Font.BOLD, 32));
+        JLabel titulo = new JLabel("Sistema de Gestión Documental");
+        titulo.setFont(new Font("Segoe UI", Font.BOLD, 36));
         titulo.setForeground(TEXT_PRIMARY);
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JLabel subtitulo = new JLabel("Complete la información y seleccione los documentos a generar");
-        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        subtitulo.setFont(new Font("Segoe UI", Font.PLAIN, 16));
         subtitulo.setForeground(TEXT_SECONDARY);
         subtitulo.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Badge informativo
-        JPanel badgePanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        // Badge con diseño limpio
+        JPanel badgePanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
         badgePanel.setOpaque(false);
-        JLabel badge = new JLabel(" ✨ Versión 2.0 ");
-        badge.setFont(new Font("Segoe UI", Font.BOLD, 11));
+        JLabel badge = new JLabel("VERSIÓN 2.0");
+        badge.setFont(new Font("Segoe UI", Font.BOLD, 10));
         badge.setForeground(PRIMARY_COLOR);
         badge.setOpaque(true);
-        badge.setBackground(new Color(238, 242, 255));
+        badge.setBackground(new Color(239, 246, 255));
         badge.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(PRIMARY_COLOR, 1, true),
-                new EmptyBorder(4, 12, 4, 12)
+                BorderFactory.createLineBorder(new Color(191, 219, 254), 1, true),
+                new EmptyBorder(5, 14, 5, 14)
         ));
         badgePanel.add(badge);
 
-        panel.add(iconLabel);
-        panel.add(Box.createRigidArea(new Dimension(0, 15)));
         panel.add(titulo);
-        panel.add(Box.createRigidArea(new Dimension(0, 8)));
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
         panel.add(subtitulo);
-        panel.add(Box.createRigidArea(new Dimension(0, 12)));
+        panel.add(Box.createRigidArea(new Dimension(0, 15)));
         panel.add(badgePanel);
 
         return panel;
     }
 
     private JPanel crearCardDatosPersonales() {
-        JPanel card = crearCardConSombra("👤 Información del Colaborador");
+        JPanel card = crearCardConSombra("Información del Colaborador");
         card.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(6, 20, 6, 20);
+        gbc.insets = new Insets(8, 25, 8, 25);
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.weightx = 1.0;
 
         int row = 1;
 
         // Sección Personal
-        agregarSeparador(card, "Datos Personales", row++, gbc);
-        txtColaborador = agregarCampoModerno(card, "Nombre Completo", row++, gbc, true, "👤");
-        txtNombres = agregarCampoModerno(card, "Nombres", row++, gbc, true, "📝");
-        txtApellidos = agregarCampoModerno(card, "Apellidos", row++, gbc, true, "📝");
-        txtCedula = agregarCampoModerno(card, "Cédula", row++, gbc, true, "🆔");
-        txtDireccion = agregarCampoModerno(card, "Dirección", row++, gbc, true, "🏠");
-        txtCiudad = agregarCampoModerno(card, "Ciudad", row++, gbc, true, "🌆");
+        agregarSeparador(card, "DATOS PERSONALES", row++, gbc);
+        txtColaborador = agregarCampoModerno(card, "Nombre Completo", row++, gbc, true);
+        txtNombres = agregarCampoModerno(card, "Nombres", row++, gbc, true);
+        txtApellidos = agregarCampoModerno(card, "Apellidos", row++, gbc, true);
+        txtCedula = agregarCampoModerno(card, "Cédula", row++, gbc, true);
+        txtDireccion = agregarCampoModerno(card, "Dirección", row++, gbc, true);
+        txtCiudad = agregarCampoModerno(card, "Ciudad", row++, gbc, true);
 
         row++;
-        agregarSeparador(card, "Información Laboral", row++, gbc);
-        txtCargo = agregarCampoModerno(card, "Cargo", row++, gbc, true, "💼");
-        txtArea = agregarCampoModerno(card, "Área / Departamento", row++, gbc, true, "🏢");
-        txtLugarTrabajo = agregarCampoModerno(card, "Lugar de Trabajo", row++, gbc, true, "📍");
-        txtReemplazo = agregarCampoModerno(card, "Reemplazo", row++, gbc, false, "🔄");
-        txtRecibidoPor = agregarCampoModerno(card, "Recibido por", row++, gbc, true, "✍️");
-        txtResponsableDTH = agregarCampoModerno(card, "Responsable DTH", row++, gbc, true, "👨‍💼");
+        agregarSeparador(card, "INFORMACIÓN LABORAL", row++, gbc);
+        txtCargo = agregarCampoModerno(card, "Cargo", row++, gbc, true);
+        txtArea = agregarCampoModerno(card, "Área / Departamento", row++, gbc, true);
+        txtLugarTrabajo = agregarCampoModerno(card, "Lugar de Trabajo", row++, gbc, true);
+        txtReemplazo = agregarCampoModerno(card, "Reemplazo", row++, gbc, false);
+        txtRecibidoPor = agregarCampoModerno(card, "Recibido por", row++, gbc, true);
+        txtResponsableDTH = agregarCampoModerno(card, "Responsable DTH", row++, gbc, true);
 
         row++;
-        agregarSeparador(card, "Fecha del Documento", row++, gbc);
+        agregarSeparador(card, "VISTOS BUENOS / ÁREAS RESPONSABLES", row++, gbc);
 
-        // Panel de fecha con diseño especial
-        JPanel fechaPanel = new JPanel(new GridLayout(1, 3, 10, 0));
+        analista_th = agregarCampoModerno(card, "Analista de Talento Humano", row++, gbc, false);
+        trabajadora_social = agregarCampoModerno(card, "Trabajador/a Social", row++, gbc, false);
+        remuneraciones = agregarCampoModerno(card, "Analista de Remuneraciones", row++, gbc, false);
+        seguros = agregarCampoModerno(card, "Jefe de Sección de Seguros", row++, gbc, false);
+        seguridad = agregarCampoModerno(card, "Supervisor de Seguridad y Salud en el Trabajo", row++, gbc, false);
+        riesgo = agregarCampoModerno(card, "Asistente de Seguridad y Salud en el Trabajo", row++, gbc, false);
+        coordinador_calidad = agregarCampoModerno(card, "Coordinador del Sistema de Evaluación de Desempeño", row++, gbc, false);
+        departamento_medico = agregarCampoModerno(card, "Departamento Médico", row++, gbc, false);
+        ingeniero_calidad = agregarCampoModerno(card, "Ingeniero de Calidad", row++, gbc, false);
+        tegnologia = agregarCampoModerno(card, "Tecnología", row++, gbc, false);
+        distribucion = agregarCampoModerno(card, "Superintendente de Reparaciones", row++, gbc, false);
+
+        row++;
+        agregarSeparador(card, "FECHA DEL DOCUMENTO", row++, gbc);
+
+        // Panel de fecha mejorado
+        JPanel fechaPanel = new JPanel(new GridLayout(1, 3, 15, 0));
         fechaPanel.setOpaque(false);
 
         txtDia = crearCampoFecha();
@@ -221,8 +247,8 @@ public class Formulario extends JFrame {
         card.add(fechaPanel, gbc);
         gbc.gridwidth = 1;
 
-        txtFecha = agregarCampoModerno(card, "Fecha Completa", row++, gbc, false, "📅");
-        txtFecha.setEditable(false);
+        txtFecha = agregarCampoModerno(card, "Fecha Completa", row++, gbc, false);
+        txtFecha.setEditable(true);
         txtFecha.setBackground(new Color(249, 250, 251));
 
         // Inicializar fechas
@@ -230,22 +256,31 @@ public class Formulario extends JFrame {
         txtDia.setText(String.valueOf(hoy.getDayOfMonth()));
         txtMes.setText(hoy.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")));
         txtAnio.setText(String.valueOf(hoy.getYear()));
-        txtFecha.setText(hoy.toString());
+        txtFecha.setText(
+                hoy.getDayOfMonth() + " de " +
+                        hoy.getMonth().getDisplayName(TextStyle.FULL, new Locale("es", "ES")) +
+                        " de " + hoy.getYear()
+        );
+
+        // 🔹 ACTIVAR SINCRONIZACIÓN
+        sincronizarFechaCompleta();
 
         return card;
     }
 
     private void agregarSeparador(JPanel panel, String texto, int row, GridBagConstraints gbc) {
-        JPanel separatorPanel = new JPanel(new BorderLayout(10, 0));
+        JPanel separatorPanel = new JPanel(new BorderLayout(15, 0));
         separatorPanel.setOpaque(false);
-        separatorPanel.setBorder(new EmptyBorder(15, 0, 10, 0));
+        separatorPanel.setBorder(new EmptyBorder(20, 0, 15, 0));
 
         JLabel label = new JLabel(texto);
-        label.setFont(new Font("Segoe UI", Font.BOLD, 13));
+        label.setFont(new Font("Segoe UI", Font.BOLD, 12));
         label.setForeground(PRIMARY_COLOR);
+        label.setPreferredSize(new Dimension(280, 20));
 
         JSeparator separator = new JSeparator();
         separator.setForeground(BORDER_COLOR);
+        separator.setBackground(BORDER_COLOR);
 
         separatorPanel.add(label, BorderLayout.WEST);
         separatorPanel.add(separator, BorderLayout.CENTER);
@@ -258,11 +293,11 @@ public class Formulario extends JFrame {
     }
 
     private JPanel crearPanelConLabel(JTextField campo, String label) {
-        JPanel panel = new JPanel(new BorderLayout(0, 5));
+        JPanel panel = new JPanel(new BorderLayout(0, 6));
         panel.setOpaque(false);
 
         JLabel lbl = new JLabel(label);
-        lbl.setFont(new Font("Segoe UI", Font.PLAIN, 11));
+        lbl.setFont(new Font("Segoe UI", Font.BOLD, 12));
         lbl.setForeground(TEXT_SECONDARY);
 
         panel.add(lbl, BorderLayout.NORTH);
@@ -273,26 +308,29 @@ public class Formulario extends JFrame {
 
     private JTextField crearCampoFecha() {
         JTextField txt = new JTextField();
-        txt.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        txt.setFont(new Font("Segoe UI", Font.BOLD, 15));
         txt.setHorizontalAlignment(JTextField.CENTER);
+        txt.setForeground(TEXT_PRIMARY);
         txt.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(BORDER_COLOR, 2, true),
-                new EmptyBorder(12, 10, 12, 10)
+                new EmptyBorder(14, 12, 14, 12)
         ));
         txt.setBackground(Color.WHITE);
 
         txt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt.setBorder(BorderFactory.createCompoundBorder(
-                        BorderFactory.createLineBorder(PRIMARY_COLOR, 2, true),
-                        new EmptyBorder(12, 10, 12, 10)
+                        BorderFactory.createLineBorder(FOCUS_BORDER, 2, true),
+                        new EmptyBorder(14, 12, 14, 12)
                 ));
+                txt.setBackground(INPUT_BG_FOCUS);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txt.setBorder(BorderFactory.createCompoundBorder(
                         BorderFactory.createLineBorder(BORDER_COLOR, 2, true),
-                        new EmptyBorder(12, 10, 12, 10)
+                        new EmptyBorder(14, 12, 14, 12)
                 ));
+                txt.setBackground(Color.WHITE);
             }
         });
 
@@ -300,7 +338,7 @@ public class Formulario extends JFrame {
     }
 
     private JPanel crearCardReportes() {
-        JPanel card = crearCardConSombra("📋 Selección de Documentos");
+        JPanel card = crearCardConSombra("Selección de Documentos");
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
 
         checkBoxReportes = new LinkedHashMap<>();
@@ -311,7 +349,8 @@ public class Formulario extends JFrame {
                 "Acta de Recepción de Reglamento",
                 "Autorización de Caución",
                 "Carnet con Descuento",
-                "Carnet sin Descuento"
+                "Carnet sin Descuento",
+                "Inducción Genérica"
         };
 
         String[] archivos = {
@@ -320,30 +359,29 @@ public class Formulario extends JFrame {
                 "ActaRecepcionReglamento.jrxml",
                 "AutorizacionCaucion.jrxml",
                 "CarnetIdentificacionConDescuento.jrxml",
-                "CarnetIdentificacionSinDescuento.jrxml"
+                "CarnetIdentificacionSinDescuento.jrxml",
+                "InduccionGenerica.jrxml"
         };
 
-        String[] iconos = {"📄", "📋", "📜", "🔐", "🎫", "🎫"};
-
-        JPanel checkboxContainer = new JPanel(new GridLayout(3, 2, 15, 15));
+        JPanel checkboxContainer = new JPanel(new GridLayout(0, 2, 20, 15));
         checkboxContainer.setOpaque(false);
-        checkboxContainer.setBorder(new EmptyBorder(10, 20, 20, 20));
+        checkboxContainer.setBorder(new EmptyBorder(10, 25, 25, 25));
 
         for (int i = 0; i < reportes.length; i++) {
-            JCheckBox checkBox = crearCheckBoxModerno(reportes[i], iconos[i]);
+            JCheckBox checkBox = crearCheckBoxModerno(reportes[i]);
             checkBoxReportes.put(archivos[i], checkBox);
             checkboxContainer.add(checkBox);
         }
 
         card.add(checkboxContainer);
 
-        // Panel de acciones con nuevo diseño
-        JPanel accionesPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 12, 15));
+        // Panel de acciones
+        JPanel accionesPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 20));
         accionesPanel.setOpaque(false);
-        accionesPanel.setBorder(new EmptyBorder(5, 20, 15, 20));
+        accionesPanel.setBorder(new EmptyBorder(5, 25, 20, 25));
 
-        JButton btnSeleccionarTodos = crearBotonAccion("Seleccionar Todos", SUCCESS_COLOR, "✓");
-        JButton btnDeseleccionarTodos = crearBotonAccion("Limpiar Selección", WARNING_COLOR, "✗");
+        JButton btnSeleccionarTodos = crearBotonSecundario("Seleccionar Todos", SUCCESS_COLOR, SUCCESS_HOVER);
+        JButton btnDeseleccionarTodos = crearBotonSecundario("Limpiar Selección", WARNING_COLOR, WARNING_HOVER);
 
         btnSeleccionarTodos.addActionListener(e ->
                 checkBoxReportes.values().forEach(cb -> cb.setSelected(true))
@@ -367,11 +405,11 @@ public class Formulario extends JFrame {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                // Sombra suave
-                g2.setColor(new Color(0, 0, 0, 8));
-                g2.fillRoundRect(2, 2, getWidth() - 4, getHeight() - 4, 20, 20);
-                g2.setColor(new Color(0, 0, 0, 4));
-                g2.fillRoundRect(4, 4, getWidth() - 8, getHeight() - 8, 20, 20);
+                // Sombra profesional
+                g2.setColor(new Color(0, 0, 0, 6));
+                for (int i = 0; i < 4; i++) {
+                    g2.fillRoundRect(i, i, getWidth() - i * 2, getHeight() - i * 2, 20, 20);
+                }
 
                 // Fondo del card
                 g2.setColor(CARD_COLOR);
@@ -382,64 +420,65 @@ public class Formulario extends JFrame {
         };
 
         card.setOpaque(false);
-        card.setBorder(new EmptyBorder(20, 0, 20, 0));
+        card.setBorder(new EmptyBorder(25, 0, 25, 0));
         card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
 
         JLabel lblTitulo = new JLabel(titulo);
-        lblTitulo.setFont(new Font("Segoe UI", Font.BOLD, 18));
+        lblTitulo.setFont(new Font("Segoe UI", Font.BOLD, 20));
         lblTitulo.setForeground(TEXT_PRIMARY);
-        lblTitulo.setBorder(new EmptyBorder(0, 20, 20, 20));
+        lblTitulo.setBorder(new EmptyBorder(0, 25, 25, 25));
         card.add(lblTitulo);
 
         return card;
     }
 
     private JTextField agregarCampoModerno(JPanel card, String label, int row,
-                                           GridBagConstraints gbc, boolean required, String icono) {
-        JLabel lbl = new JLabel(icono + " " + label + (required ? " *" : ""));
-        lbl.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+                                           GridBagConstraints gbc, boolean required) {
+        JLabel lbl = new JLabel(label + (required ? " *" : ""));
+        lbl.setFont(new Font("Segoe UI", Font.BOLD, 13));
         lbl.setForeground(TEXT_PRIMARY);
 
         gbc.gridx = 0;
         gbc.gridy = row;
         gbc.gridwidth = 1;
-        gbc.weightx = 0.35;
+        gbc.weightx = 0.4;
         card.add(lbl, gbc);
 
         JTextField txt = new JTextField();
-        txt.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        txt.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        txt.setForeground(TEXT_PRIMARY);
         txt.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(BORDER_COLOR, 1, true),
-                new EmptyBorder(11, 14, 11, 14)
+                new EmptyBorder(12, 16, 12, 16)
         ));
         txt.setBackground(Color.WHITE);
 
-        // Efectos de interacción mejorados
+        // Efectos de interacción
         txt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txt.setBorder(BorderFactory.createCompoundBorder(
-                        BorderFactory.createLineBorder(PRIMARY_COLOR, 2, true),
-                        new EmptyBorder(10, 13, 10, 13)
+                        BorderFactory.createLineBorder(FOCUS_BORDER, 2, true),
+                        new EmptyBorder(11, 15, 11, 15)
                 ));
-                txt.setBackground(new Color(249, 250, 255));
+                txt.setBackground(INPUT_BG_FOCUS);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
                 txt.setBorder(BorderFactory.createCompoundBorder(
                         BorderFactory.createLineBorder(BORDER_COLOR, 1, true),
-                        new EmptyBorder(11, 14, 11, 14)
+                        new EmptyBorder(12, 16, 12, 16)
                 ));
                 txt.setBackground(Color.WHITE);
             }
         });
 
         gbc.gridx = 1;
-        gbc.weightx = 0.65;
+        gbc.weightx = 0.6;
         card.add(txt, gbc);
 
         return txt;
     }
 
-    private JCheckBox crearCheckBoxModerno(String texto, String icono) {
+    private JCheckBox crearCheckBoxModerno(String texto) {
         JCheckBox checkBox = new JCheckBox() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -447,8 +486,8 @@ public class Formulario extends JFrame {
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
                 if (getModel().isRollover()) {
-                    g2.setColor(new Color(243, 244, 246));
-                    g2.fillRoundRect(0, 0, getWidth(), getHeight(), 12, 12);
+                    g2.setColor(new Color(249, 250, 251));
+                    g2.fillRoundRect(0, 0, getWidth(), getHeight(), 10, 10);
                 }
 
                 g2.dispose();
@@ -456,20 +495,20 @@ public class Formulario extends JFrame {
             }
         };
 
-        checkBox.setText(" " + icono + "  " + texto);
-        checkBox.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+        checkBox.setText(texto);
+        checkBox.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         checkBox.setOpaque(false);
         checkBox.setForeground(TEXT_PRIMARY);
         checkBox.setCursor(new Cursor(Cursor.HAND_CURSOR));
         checkBox.setFocusPainted(false);
         checkBox.setSelected(true);
-        checkBox.setBorder(new EmptyBorder(12, 12, 12, 12));
+        checkBox.setBorder(new EmptyBorder(14, 16, 14, 16));
 
         return checkBox;
     }
 
-    private JButton crearBotonAccion(String texto, Color color, String icono) {
-        JButton btn = new JButton(icono + "  " + texto) {
+    private JButton crearBotonSecundario(String texto, Color color, Color hoverColor) {
+        JButton btn = new JButton(texto) {
             @Override
             protected void paintComponent(Graphics g) {
                 Graphics2D g2 = (Graphics2D) g.create();
@@ -478,7 +517,7 @@ public class Formulario extends JFrame {
                 if (getModel().isPressed()) {
                     g2.setColor(color.darker());
                 } else if (getModel().isRollover()) {
-                    g2.setColor(color.brighter());
+                    g2.setColor(hoverColor);
                 } else {
                     g2.setColor(color);
                 }
@@ -489,11 +528,11 @@ public class Formulario extends JFrame {
             }
         };
 
-        btn.setFont(new Font("Segoe UI", Font.BOLD, 12));
+        btn.setFont(new Font("Segoe UI", Font.BOLD, 13));
         btn.setForeground(Color.WHITE);
         btn.setContentAreaFilled(false);
         btn.setBorderPainted(false);
-        btn.setBorder(new EmptyBorder(8, 20, 8, 20));
+        btn.setBorder(new EmptyBorder(10, 24, 10, 24));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btn.setFocusPainted(false);
 
@@ -501,7 +540,7 @@ public class Formulario extends JFrame {
     }
 
     private JPanel crearFooter() {
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 20));
+        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 25));
         panel.setOpaque(false);
 
         JButton btnGenerar = new JButton("GENERAR DOCUMENTOS") {
@@ -510,16 +549,19 @@ public class Formulario extends JFrame {
                 Graphics2D g2 = (Graphics2D) g.create();
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-                // Gradiente para el botón
-                GradientPaint gp;
+                Color c1, c2;
                 if (getModel().isPressed()) {
-                    gp = new GradientPaint(0, 0, PRIMARY_DARK, getWidth(), 0, ACCENT_COLOR.darker());
+                    c1 = PRIMARY_PRESSED;
+                    c2 = SECONDARY_COLOR.darker();
                 } else if (getModel().isRollover()) {
-                    gp = new GradientPaint(0, 0, PRIMARY_COLOR.brighter(), getWidth(), 0, ACCENT_COLOR);
+                    c1 = PRIMARY_HOVER;
+                    c2 = SECONDARY_COLOR;
                 } else {
-                    gp = new GradientPaint(0, 0, PRIMARY_COLOR, getWidth(), 0, ACCENT_COLOR);
+                    c1 = PRIMARY_COLOR;
+                    c2 = SECONDARY_COLOR;
                 }
 
+                GradientPaint gp = new GradientPaint(0, 0, c1, getWidth(), 0, c2);
                 g2.setPaint(gp);
                 g2.fillRoundRect(0, 0, getWidth(), getHeight(), 12, 12);
 
@@ -528,11 +570,11 @@ public class Formulario extends JFrame {
             }
         };
 
-        btnGenerar.setFont(new Font("Segoe UI", Font.BOLD, 15));
+        btnGenerar.setFont(new Font("Segoe UI", Font.BOLD, 16));
         btnGenerar.setForeground(Color.WHITE);
         btnGenerar.setContentAreaFilled(false);
         btnGenerar.setBorderPainted(false);
-        btnGenerar.setBorder(new EmptyBorder(16, 50, 16, 50));
+        btnGenerar.setBorder(new EmptyBorder(18, 60, 18, 60));
         btnGenerar.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btnGenerar.setFocusPainted(false);
         btnGenerar.addActionListener(e -> generar());
@@ -542,6 +584,7 @@ public class Formulario extends JFrame {
     }
 
     private void generar() {
+        // Validación de campos obligatorios
         if (txtColaborador.getText().trim().isEmpty()
                 || txtCedula.getText().trim().isEmpty()
                 || txtArea.getText().trim().isEmpty()
@@ -550,7 +593,12 @@ public class Formulario extends JFrame {
                 || txtRecibidoPor.getText().trim().isEmpty()
                 || txtDia.getText().trim().isEmpty()
                 || txtMes.getText().trim().isEmpty()
-                || txtAnio.getText().trim().isEmpty()) {
+                || txtAnio.getText().trim().isEmpty()
+                || txtNombres.getText().trim().isEmpty()
+                || txtApellidos.getText().trim().isEmpty()
+                || txtDireccion.getText().trim().isEmpty()
+                || txtCiudad.getText().trim().isEmpty()
+                || txtResponsableDTH.getText().trim().isEmpty()) {
 
             mostrarMensajeModerno(
                     "Por favor complete todos los campos obligatorios marcados con *",
@@ -593,6 +641,17 @@ public class Formulario extends JFrame {
         params.put("colaborador_apellidos", txtApellidos.getText().trim());
         params.put("cargo", txtCargo.getText().trim());
         params.put("responsable_DTH", txtResponsableDTH.getText().trim());
+        params.put("analista_th", analista_th.getText().trim());
+        params.put("trabajadora_social", trabajadora_social.getText().trim());
+        params.put("remuneraciones", remuneraciones.getText().trim());
+        params.put("seguros", seguros.getText().trim());
+        params.put("seguridad", seguridad.getText().trim());
+        params.put("riesgo", riesgo.getText().trim());
+        params.put("coordinador_calidad", coordinador_calidad.getText().trim());
+        params.put("departamento_medico", departamento_medico.getText().trim());
+        params.put("ingeniero_calidad", ingeniero_calidad.getText().trim());
+        params.put("tegnologia", tegnologia.getText().trim());
+        params.put("distribucion", distribucion.getText().trim());
 
         ReporteService.generarDocumentosSeleccionados(reportesSeleccionados, params);
 
@@ -609,4 +668,55 @@ public class Formulario extends JFrame {
         UIManager.put("OptionPane.messageForeground", TEXT_PRIMARY);
         JOptionPane.showMessageDialog(this, mensaje, titulo, tipo);
     }
+
+    private void sincronizarFechaCompleta() {
+        txtDia.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
+            public void insertUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void removeUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void changedUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+
+            private void actualizar() {
+                String dia = txtDia.getText().trim();
+                String mes = txtMes.getText().trim();
+                String anio = txtAnio.getText().trim();
+
+                if (!dia.isEmpty() && !mes.isEmpty() && !anio.isEmpty()) {
+                    txtFecha.setText(dia + " de " + mes + " de " + anio);
+                }
+            }
+        });
+
+        txtMes.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
+            public void insertUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void removeUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void changedUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+
+            private void actualizar() {
+                String dia = txtDia.getText().trim();
+                String mes = txtMes.getText().trim();
+                String anio = txtAnio.getText().trim();
+
+                if (!dia.isEmpty() && !mes.isEmpty() && !anio.isEmpty()) {
+                    txtFecha.setText(dia + " de " + mes + " de " + anio);
+                }
+            }
+        });
+
+        txtAnio.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
+            public void insertUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void removeUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+            public void changedUpdate(javax.swing.event.DocumentEvent e) { actualizar(); }
+
+            private void actualizar() {
+                String dia = txtDia.getText().trim();
+                String mes = txtMes.getText().trim();
+                String anio = txtAnio.getText().trim();
+
+                if (!dia.isEmpty() && !mes.isEmpty() && !anio.isEmpty()) {
+                    txtFecha.setText(dia + " de " + mes + " de " + anio);
+                }
+            }
+        });
+    }
+
 }

@@ -69,14 +69,14 @@
             </element>
             <element kind="frame" uuid="80686f72-4c2e-49e1-9e90-09b677719e84" mode="Opaque" x="70" y="100" width="78" height="20" backcolor="#BFE1FF">
                 <element kind="frame" uuid="b976b313-5ca6-4796-9ecf-6f623d782e27" mode="Opaque" x="0" y="20" width="78" height="40" backcolor="#FFFFFF">
-                    <element kind="staticText" uuid="ebd01f5e-50c6-4622-ac3b-b32d04cadaa8" x="0" y="0" width="78" height="40" fontName="Arial&#xa;" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+                    <element kind="staticText" uuid="ebd01f5e-50c6-4622-ac3b-b32d04cadaa8" x="0" y="0" width="78" height="40" fontName="Arial" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
                         <text><![CDATA[SELECCIÓN]]></text>
                     </element>
                     <box>
                         <pen lineWidth="0.5"/>
                     </box>
                 </element>
-                <element kind="staticText" uuid="0ebc4408-294d-4a77-aa9b-02908a6e09e9" x="0" y="0" width="78" height="20" fontName="Arial&#xa;Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="0ebc4408-294d-4a77-aa9b-02908a6e09e9" x="0" y="0" width="78" height="20" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[Área]]></text>
                 </element>
                 <box>
@@ -140,7 +140,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="202cc45e-de72-4ae9-b23d-36569851f5aa" mode="Opaque" x="70" y="160" width="78" height="21" backcolor="#FFFFFF">
-                <element kind="staticText" uuid="70914222-9574-4a11-a375-5e42824bd86d" x="0" y="0" width="78" height="21" fontName="Arial&#xa;" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="70914222-9574-4a11-a375-5e42824bd86d" x="0" y="0" width="78" height="21" fontName="Arial" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[TRABAJO SOCIAL]]></text>
                 </element>
                 <box>
@@ -158,7 +158,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="e4d815e1-6f23-4d27-b7dd-e848b19d6c4e" mode="Opaque" x="70" y="181" width="78" height="68" backcolor="#FFFFFF">
-                <element kind="staticText" uuid="974254a4-c3a5-4865-a114-8a301f5d8bc6" x="0" y="0" width="78" height="68" fontName="Arial&#xa;" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="974254a4-c3a5-4865-a114-8a301f5d8bc6" x="0" y="0" width="78" height="68" fontName="Arial" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[REMUNERACIONES]]></text>
                 </element>
                 <box>
@@ -197,7 +197,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="6d5ce1f9-fd58-49bc-9c0e-ed8c111d1132" mode="Opaque" x="70" y="249" width="78" height="29" backcolor="#FFFFFF">
-                <element kind="staticText" uuid="af63c84b-1d8b-4bd0-be14-b7478d6b0b2f" x="0" y="0" width="78" height="29" fontName="Arial&#xa;" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="af63c84b-1d8b-4bd0-be14-b7478d6b0b2f" x="0" y="0" width="78" height="29" fontName="Arial" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[SEGUROS]]></text>
                 </element>
                 <box>
@@ -264,7 +264,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="40677d2a-33ad-48f5-b5df-a441a8c8a599" mode="Opaque" x="70" y="278" width="78" height="192" backcolor="#FFFFFF">
-                <element kind="staticText" uuid="688b4276-ce6d-49fa-a31b-40f82a768c6c" x="0" y="0" width="78" height="192" fontName="Arial&#xa;" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="688b4276-ce6d-49fa-a31b-40f82a768c6c" x="0" y="0" width="78" height="192" fontName="Arial" fontSize="7.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[SEGURIDAD EN EL TRABAJO]]></text>
                 </element>
                 <box>
@@ -314,7 +314,7 @@
                     <pen lineWidth="0.5"/>
                 </box>
             </element>
-            <element kind="staticText" uuid="5a190378-dc82-4322-9c7d-2b5f887b04ca" mode="Opaque" x="148" y="100" width="205" height="20" backcolor="#BFE1FF" fontName="Arial&#xa;Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+            <element kind="staticText" uuid="5a190378-dc82-4322-9c7d-2b5f887b04ca" mode="Opaque" x="148" y="100" width="205" height="20" backcolor="#BFE1FF" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                 <text><![CDATA[Tema a Tratar]]></text>
                 <box>
                     <pen lineWidth="0.5"/>
