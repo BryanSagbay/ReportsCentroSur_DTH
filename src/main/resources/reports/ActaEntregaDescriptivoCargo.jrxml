@@ -1,6 +1,6 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
 <jasperReport name="ActaEntregaCargo" language="java" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b4c2e86-ce69-454c-955c-03cb5409dc99">
-    <parameter name="cuidad_colaborador" class="java.lang.String"/>
+    <parameter name="ciudad_colaborador" class="java.lang.String"/>
     <parameter name="direccion" class="java.lang.String"/>
     <parameter name="colaborador_nombres" class="java.lang.String"/>
     <parameter name="colaborador_apellidos" class="java.lang.String"/>
@@ -42,7 +42,7 @@
             <pen lineWidth="0.5"/>
         </element>
         <element kind="staticText" uuid="ac756276-a6c5-4037-a429-27ff1522e634" x="30" y="9" width="44" height="20" forecolor="#13702A" fontName="Arial">
-            <text><![CDATA[CUIDAD:]]></text>
+            <text><![CDATA[CIUDAD:]]></text>
             <box>
                 <pen lineColor="#0A8228"/>
             </box>
@@ -54,7 +54,7 @@
             </box>
         </element>
         <element kind="textField" uuid="eccc2422-ad9d-4762-9fbf-9b4244112f68" x="75" y="9" width="170" height="20" fontName="Arial">
-            <expression><![CDATA[$P{cuidad_colaborador}]]></expression>
+            <expression><![CDATA[$P{ciudad_colaborador}]]></expression>
         </element>
         <element kind="textField" uuid="f4365b40-1ac2-439b-b749-6fc862913e85" x="91" y="29" width="170" height="20" fontName="Arial">
             <expression><![CDATA[$P{direccion}]]></expression>

@@ -25,7 +25,7 @@
     <background splitType="Stretch"/>
     <title height="39" splitType="Stretch">
         <element kind="frame" uuid="0a2838a3-4c24-4946-a216-0246227c71f2" mode="Transparent" x="130" y="3" width="300" height="31">
-            <element kind="staticText" uuid="63e4c54b-a055-4ff0-b483-0054ad4e8e38" x="44" y="10" width="212" height="14" fontName="Arial" fontSize="10.0">
+            <element kind="staticText" uuid="63e4c54b-a055-4ff0-b483-0054ad4e8e38" x="47" y="10" width="206" height="14" fontName="Arial" fontSize="10.0">
                 <text><![CDATA[HOJA DE RUTA DE INDUCCIÓN GENÉRICA]]></text>
             </element>
             <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
@@ -476,7 +476,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="5435d4fa-de3b-4116-8550-7cddf5d8d693" mode="Opaque" x="10" y="17" width="130" height="14" backcolor="#BFE1FF">
-                <element kind="staticText" uuid="97bb2bce-c6c6-4bf8-8277-021126217c3d" x="7" y="0" width="110" height="14" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
+                <element kind="staticText" uuid="97bb2bce-c6c6-4bf8-8277-021126217c3d" x="7" y="0" width="110" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
                     <text><![CDATA[Cargo:]]></text>
                 </element>
                 <box>
@@ -484,7 +484,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="c17ee70c-4833-43c8-98e8-6b87cfc120cc" mode="Opaque" x="10" y="31" width="130" height="14" backcolor="#BFE1FF">
-                <element kind="staticText" uuid="1273ec7f-709e-4977-a6b6-ce3625b27d1b" x="7" y="0" width="110" height="14" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
+                <element kind="staticText" uuid="1273ec7f-709e-4977-a6b6-ce3625b27d1b" x="7" y="0" width="110" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
                     <text><![CDATA[Trabajador:]]></text>
                 </element>
                 <box>
@@ -492,7 +492,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="b6e95401-1a88-43b7-9fb1-a75565d759fe" mode="Opaque" x="10" y="45" width="130" height="14" backcolor="#BFE1FF">
-                <element kind="staticText" uuid="ea9f91ba-a96f-4a9a-9b1a-b091974b2bbd" x="7" y="0" width="110" height="14" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
+                <element kind="staticText" uuid="ea9f91ba-a96f-4a9a-9b1a-b091974b2bbd" x="7" y="0" width="110" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
                     <text><![CDATA[Dirección:]]></text>
                 </element>
                 <box>
@@ -500,7 +500,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="998975e7-9aff-46df-8130-08cbbd5b9944" mode="Opaque" x="10" y="59" width="130" height="14" backcolor="#BFE1FF">
-                <element kind="staticText" uuid="c516458f-38bf-4b07-8e62-1109eed2067c" x="7" y="0" width="110" height="14" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
+                <element kind="staticText" uuid="c516458f-38bf-4b07-8e62-1109eed2067c" x="7" y="0" width="110" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Left" vTextAlign="Middle">
                     <text><![CDATA[Fecha de Ingreso:]]></text>
                 </element>
                 <box>
@@ -508,7 +508,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="cfb54bdc-db15-43c7-8279-4e4dd846be1c" x="140" y="17" width="405" height="14">
-                <element kind="textField" uuid="a77b7bb1-ae70-4514-b0c7-8a7aa478c623" x="10" y="0" width="390" height="14" fontSize="8.0" vTextAlign="Middle">
+                <element kind="textField" uuid="a77b7bb1-ae70-4514-b0c7-8a7aa478c623" x="10" y="0" width="390" height="14" fontName="Arial" fontSize="8.0" vTextAlign="Middle">
                     <expression><![CDATA[$P{cargo}]]></expression>
                 </element>
                 <box>
@@ -516,7 +516,7 @@
                 </box>
             </element>
             <element kind="frame" uuid="7328b1eb-21f0-4dcc-94fe-fb626ff4ffe4" x="140" y="31" width="405" height="14">
-                <element kind="textField" uuid="f392d2f0-9f03-4527-8cba-625677a73fda" x="10" y="0" width="390" height="14" fontSize="8.0" vTextAlign="Middle">
+                <element kind="textField" uuid="f392d2f0-9f03-4527-8cba-625677a73fda" x="10" y="0" width="390" height="14" fontName="Arial" fontSize="8.0" vTextAlign="Middle">
                     <expression><![CDATA[$P{colaborador}]]></expression>
                 </element>
                 <box>
@@ -524,11 +524,11 @@
                 </box>
             </element>
             <element kind="frame" uuid="5adf923a-9b8e-4e71-9c3c-dfc1510cb223" x="140" y="45" width="405" height="14">
-                <element kind="textField" uuid="5eeb56a8-450e-4b92-b3ca-80d5280723d0" x="10" y="0" width="390" height="14" fontSize="8.0" vTextAlign="Middle">
+                <element kind="textField" uuid="5eeb56a8-450e-4b92-b3ca-80d5280723d0" x="10" y="0" width="390" height="14" fontName="Arial" fontSize="8.0" vTextAlign="Middle">
                     <expression><![CDATA[$P{direccion}]]></expression>
                 </element>
                 <element kind="frame" uuid="35f2047a-a355-4e72-a621-904e72d06446" x="0" y="14" width="405" height="14">
-                    <element kind="textField" uuid="022f14ef-ecc2-43d5-abd4-457efd67e0bb" x="10" y="0" width="390" height="14" fontSize="8.0" vTextAlign="Middle">
+                    <element kind="textField" uuid="022f14ef-ecc2-43d5-abd4-457efd67e0bb" x="10" y="0" width="390" height="14" fontName="Arial" fontSize="8.0" vTextAlign="Middle">
                         <expression><![CDATA[$P{fecha_entrega_documentos}]]></expression>
                     </element>
                     <box>
@@ -548,14 +548,14 @@
                 </box>
             </element>
             <element kind="frame" uuid="5b481dd0-1352-4887-b0ff-003f0be6d606" mode="Opaque" x="10" y="80" width="50" height="14" backcolor="#BFE1FF">
-                <element kind="staticText" uuid="6e4df2ad-34db-4bf9-bd4e-c1cf206932d8" x="0" y="0" width="50" height="14" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+                <element kind="staticText" uuid="6e4df2ad-34db-4bf9-bd4e-c1cf206932d8" x="0" y="0" width="50" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <text><![CDATA[OBJETIVO:]]></text>
                 </element>
                 <box>
                     <pen lineWidth="0.5"/>
                 </box>
             </element>
-            <element kind="staticText" uuid="839b4bbe-e891-400d-a776-a63e7f0081ed" x="60" y="80" width="485" height="14" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+            <element kind="staticText" uuid="839b4bbe-e891-400d-a776-a63e7f0081ed" x="60" y="80" width="485" height="14" fontName="Arial&#xa;Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                 <text><![CDATA[Brindar toda la información necesaria de la Empresa que se considera relevante para el conocimiento  del nuevo trabajador. ]]></text>
                 <box>
                     <pen lineWidth="0.5"/>
