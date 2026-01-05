@@ -5,7 +5,6 @@ import org.example.service.ReporteService;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.geom.RoundRectangle2D;
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.*;
@@ -38,7 +37,7 @@ public class Formulario extends JFrame {
     private JTextField coordinador_calidad;
     private JTextField departamento_medico;
     private JTextField ingeniero_calidad;
-    private JTextField tegnologia;
+    private JTextField tecnologia;
     private JTextField distribucion;
 
     private Map<String, JCheckBox> checkBoxReportes;
@@ -48,7 +47,6 @@ public class Formulario extends JFrame {
     private static final Color PRIMARY_HOVER = new Color(37, 99, 235); // Blue-600
     private static final Color PRIMARY_PRESSED = new Color(29, 78, 216); // Blue-700
     private static final Color SECONDARY_COLOR = new Color(99, 102, 241); // Indigo-500
-    private static final Color ACCENT_COLOR = new Color(168, 85, 247); // Purple-500
     private static final Color SUCCESS_COLOR = new Color(34, 197, 94); // Green-500
     private static final Color SUCCESS_HOVER = new Color(22, 163, 74); // Green-600
     private static final Color WARNING_COLOR = new Color(249, 115, 22); // Orange-500
@@ -223,7 +221,7 @@ public class Formulario extends JFrame {
         coordinador_calidad = agregarCampoModerno(card, "Coordinador del Sistema de Evaluación de Desempeño", row++, gbc, false);
         departamento_medico = agregarCampoModerno(card, "Departamento Médico", row++, gbc, false);
         ingeniero_calidad = agregarCampoModerno(card, "Ingeniero de Calidad", row++, gbc, false);
-        tegnologia = agregarCampoModerno(card, "Tecnología", row++, gbc, false);
+        tecnologia = agregarCampoModerno(card, "Tecnología", row++, gbc, false);
         distribucion = agregarCampoModerno(card, "Superintendente de Reparaciones", row++, gbc, false);
 
         row++;
@@ -650,7 +648,7 @@ public class Formulario extends JFrame {
         params.put("coordinador_calidad", coordinador_calidad.getText().trim());
         params.put("departamento_medico", departamento_medico.getText().trim());
         params.put("ingeniero_calidad", ingeniero_calidad.getText().trim());
-        params.put("tegnologia", tegnologia.getText().trim());
+        params.put("tecnologia", tecnologia.getText().trim());
         params.put("distribucion", distribucion.getText().trim());
 
         ReporteService.generarDocumentosSeleccionados(reportesSeleccionados, params);
