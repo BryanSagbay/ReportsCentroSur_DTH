@@ -1,7 +1,9 @@
 <!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
 <jasperReport name="GenericoReport" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6fa7e53e-4857-45c7-bcb0-ba711536cc36">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
     <parameter name="colaborador" class="java.lang.String"/>
     <parameter name="cedula" class="java.lang.String"/>
+    <parameter name="ciudad_colaborador" class="java.lang.String"/>
     <parameter name="direccion" class="java.lang.String"/>
     <parameter name="cargo" class="java.lang.String"/>
     <parameter name="fecha_entrega_documentos" class="java.lang.String"/>
@@ -17,7 +19,7 @@
     <parameter name="coordinador_calidad" class="java.lang.String"/>
     <parameter name="departamento_medico" class="java.lang.String"/>
     <parameter name="ingeniero_calidad" class="java.lang.String"/>
-    <parameter name="tegnologia" class="java.lang.String"/>
+    <parameter name="tecnologia" class="java.lang.String"/>
     <parameter name="distribucion" class="java.lang.String"/>
     <query language="sql"><![CDATA[]]></query>
     <background splitType="Stretch"/>
@@ -181,8 +183,7 @@
             </element>
             <element kind="frame" uuid="2f9442c8-c7a9-4fa6-a9a3-448300fe97a7" mode="Opaque" x="353" y="181" width="102" height="68" backcolor="#FFFFFF">
                 <element kind="textField" uuid="de7b8a4e-75d7-43d5-84df-3ef444de3bee" x="0" y="-21" width="102" height="21" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
-                    <expression><![CDATA[$P{trabajadora_social}
-]]></expression>
+                    <expression><![CDATA[$P{trabajadora_social}]]></expression>
                 </element>
                 <element kind="textField" uuid="57189dac-348f-4ce1-aab6-9d794db759d8" x="0" y="0" width="102" height="68" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <expression><![CDATA[$P{remuneraciones}]]></expression>
@@ -424,6 +425,9 @@
             <element kind="frame" uuid="d4bf48d6-dfe2-42e8-9573-bb56972a960c" mode="Opaque" x="353" y="470" width="102" height="17" backcolor="#FFFFFF">
                 <element kind="textField" uuid="b6824185-5dc7-4cf7-a712-ab6e34f9ffb9" x="0" y="0" width="102" height="17" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <expression><![CDATA[$P{coordinador_calidad}]]></expression>
+                    <box>
+                        <pen lineWidth="0.5"/>
+                    </box>
                 </element>
                 <box>
                     <pen lineWidth="0.5"/>
@@ -558,17 +562,17 @@
                 </box>
             </element>
             <element kind="frame" uuid="00c4e212-7c40-4b7c-9781-0c825debd7a1" x="10" y="689" width="536" height="65">
-                <element kind="staticText" uuid="0c75ce6b-f26f-4249-ab96-ac45cd14c1e7" x="5" y="4" width="525" height="22" fontName="Arial" fontSize="7.0">
-                    <text><![CDATA["Certifico que he concluído satisfactoriamente todo el proceso de inducción genérica.  Dicho proceso se ha realizado en la ciudad de"+ $P{cuidad}+ ", el "+ $P{dia}+ " de " +$P{mes}+" de "+ $P{anio}.]]></text>
+                <element kind="textField" uuid="d2641442-959c-4005-8e24-f2736ead1bc0" x="5" y="5" width="524" height="23" fontName="Arial" fontSize="8.0">
+                    <expression><![CDATA["Certifico que he concluído satisfactoriamente todo el proceso de inducción genérica.  Dicho proceso se ha realizado en la ciudad de"+ $P{ciudad_colaborador} +", el "+ $P{dia}+ " de " + $P{mes} +" de "+ $P{anio} +"."]]></expression>
                 </element>
-                <element kind="staticText" uuid="13f83103-cee8-4d7d-b9ce-e5c28e048be5" x="5" y="41" width="32" height="9" fontName="Arial&#xa;Arial" fontSize="7.0">
+                <element kind="staticText" uuid="13f83103-cee8-4d7d-b9ce-e5c28e048be5" x="5" y="41" width="32" height="9" fontName="Arial" fontSize="7.0">
                     <text><![CDATA[Nombre:]]></text>
                 </element>
-                <element kind="staticText" uuid="34cce4b2-1ead-4760-b637-a789814e1cc5" x="5" y="30" width="23" height="9" fontName="Arial&#xa;Arial" fontSize="7.0">
+                <element kind="staticText" uuid="34cce4b2-1ead-4760-b637-a789814e1cc5" x="5" y="30" width="23" height="9" fontName="Arial" fontSize="7.0">
                     <text><![CDATA[Firma:]]></text>
                     <property name="com.jaspersoft.studio.unit.width" value="px"/>
                 </element>
-                <element kind="staticText" uuid="9a9ff85d-ce4c-447a-b898-e0029c308e17" x="5" y="52" width="15" height="9" fontName="Arial&#xa;Arial" fontSize="7.0">
+                <element kind="staticText" uuid="9a9ff85d-ce4c-447a-b898-e0029c308e17" x="5" y="52" width="15" height="9" fontName="Arial" fontSize="7.0">
                     <text><![CDATA[CI:]]></text>
                 </element>
                 <element kind="textField" uuid="f9723704-3a3b-496c-8646-96291b80236c" x="37" y="41" width="183" height="9" fontName="Arial" fontSize="7.0">
@@ -593,6 +597,9 @@
             <element kind="frame" uuid="84802b78-a0e4-446f-a968-5912b2b0233a" mode="Opaque" x="353" y="487" width="102" height="22" backcolor="#FFFFFF">
                 <element kind="textField" uuid="b47e9098-19c2-40ef-bfc3-d1417c26c61c" x="0" y="0" width="102" height="22" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <expression><![CDATA[$P{ingeniero_calidad}]]></expression>
+                    <box>
+                        <pen lineWidth="0.5"/>
+                    </box>
                 </element>
                 <element kind="textField" uuid="722e9c26-a82c-406a-ac7d-a1a6e4cd5a76" x="0" y="22" width="102" height="60" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                     <expression><![CDATA[$P{departamento_medico}]]></expression>
