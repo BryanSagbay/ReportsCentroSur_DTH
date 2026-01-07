@@ -21,6 +21,7 @@ public class ReporteService {
         generarReporte("AutorizacionCaucion.jrxml", params);
         generarReporte("CarnetIdentificacionConDescuento.jrxml", params);
         generarReporte("CarnetIdentificacionSinDescuento.jrxml", params);
+        generarReporte("InduccionGenerica.jrxml", params);
     }
 
     /**

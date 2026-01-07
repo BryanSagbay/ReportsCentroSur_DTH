@@ -555,7 +555,7 @@
                     <pen lineWidth="0.5"/>
                 </box>
             </element>
-            <element kind="staticText" uuid="839b4bbe-e891-400d-a776-a63e7f0081ed" x="60" y="80" width="485" height="14" fontName="Arial&#xa;Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
+            <element kind="staticText" uuid="839b4bbe-e891-400d-a776-a63e7f0081ed" x="60" y="80" width="485" height="14" fontName="Arial" fontSize="8.0" hTextAlign="Center" vTextAlign="Middle">
                 <text><![CDATA[Brindar toda la información necesaria de la Empresa que se considera relevante para el conocimiento  del nuevo trabajador. ]]></text>
                 <box>
                     <pen lineWidth="0.5"/>
